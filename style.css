@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial;
+    background-color: #f4fffc;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #02c39a;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.logo {
+    color: white;
+    background-color: #02c39a;
+    padding: 12px;
+    font-size: x-large;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.nav-container {
+    background-color: teal;
+    height: 70px;
+}
+
+.title, h2 {
+    margin: 30px 40px;
+    text-decoration: underline;
+    color: #02c39a;
+}
+
+p, li{
+    color: #087e70;
+    margin: 20px 40px;
+    line-height: 1.5;
+}
+
+main {
+    min-height: 650px;
+}
+
+img {
+    width: 30%;
+    border-radius: 10px;
+    margin: 15px 40px;
+}
+
+footer {
+    background-color: teal;
+    padding: 15px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin: 8px;
+}
+
+.department {
+    background-color: white;
+    border: 1px solid teal;
+    margin: 25px 40px;
+    padding: 10px;
+}
+
+.doctor-card {
+    background-color: white;
+    border: 1px solid teal;
+    margin: 20px 40px;
+    padding: 10px;
+    width: 300px;
+}
+
+.doctor-card img {
+    width: 150px;
+}
+
+.booking-container {
+    background-color: white;
+    border: 1px solid teal;
+    margin: 30px 40px;
+    padding: 20px;
+    width: 400px;
+}
+
+input, select {
+    padding: 8px;
+    margin: 8px;
+}
+
+label {
+    color: teal;
+    margin: 10px;
+}
+
+button {
+    background-color: #02c39a;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+}
+
+.confirmation-container {
+    background-color: white;
+    border: 1px solid teal;
+    margin: 30px 40px;
+    padding: 15px;
+}
