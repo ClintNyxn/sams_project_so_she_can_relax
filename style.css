@@ -8,6 +8,36 @@ body {
     background-color: #f4fffc;
 }
 
+
+header{
+    height: 80px;
+    width: 100%;
+    background-color: teal;
+    display: flex;
+    justify-content: space-between; 
+    /* main-axis -> horizontal*/
+    align-items: center;
+    /* cross-axis -> vertical*/
+    /* you cant put flex effects on children therefore you have to use 
+    two parent elements inside original parent */
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 a {
     text-decoration: none;
     color: white;
@@ -26,10 +56,6 @@ a {
     margin: 20px;
 }
 
-.nav-container {
-    background-color: teal;
-    height: 70px;
-}
 
 .title, h2 {
     margin: 30px 40px;
@@ -73,10 +99,8 @@ footer p {
 
 .doctor-card {
     background-color: white;
-    border: 1px solid teal;
-    margin: 20px 40px;
-    padding: 10px;
-    width: 300px;
+    
+    /* width: 300px; */
 }
 
 .doctor-card img {
@@ -86,8 +110,6 @@ footer p {
 .booking-container {
     background-color: white;
     border: 1px solid teal;
-    margin: 30px 40px;
-    padding: 20px;
     width: 400px;
 }
 

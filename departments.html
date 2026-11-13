@@ -4,75 +4,328 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediCare Departments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .intro p {
+            text-align: center;
+        }
+
+        /* department box: text on the left (takes the free space), doctor card on the right */
+        .department {
+            padding: 20px;
+        }
+
+        .department-info {
+            justify-content: space-between !important;
+        }
+
+        .department-info > div:first-child {
+            flex: 1;
+        }
+
+        .department-info h2 {
+            margin: 10px 40px;
+        }
+
+        .department-info p {
+            margin: 10px 40px;
+        }
+
+        /* button lines up with the text above it (inline style said 35px) */
+        .department-info a {
+            margin: 10px 40px !important;
+        }
+
+        /* doctor card: same size for every department, centered text */
+        .doctor-card {
+            width: 260px;
+            margin: 10px 40px;
+            padding: 15px;
+            text-align: center;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+
+        .doctor-card h2 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .doctor-card p {
+            margin: 6px 10px;
+        }
+
+        /* every photo gets the same box, so different pictures still line up */
+        .doctor-card img {
+            width: 160px;
+            height: 190px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="nav-container">
+    <header>
+      <div>
         <a href="index.html" class="logo">MediCare Connect</a>
+      </div>
+
+      <div>
         <a href="index.html">Home</a>
         <a href="departments.html">Departments</a>
-        <a href="doctors.html">Doctors</a>
         <a href="booking.html">Book Appointment</a>
-    </div>
-</header>
+      </div>
+    </header>
 
 <main>
 
     <section class="intro">
         <h1 class="title">Our Medical Departments</h1>
         <p>
-            Comprehensive healthcare, specialised expertise, and
-            compassionate treatment — all under one roof.
-            Explore our departments and find the right care for you.
+            Comprehensive healthcare, specialised expertise, and compassionate
+            treatment — all under one roof. Explore our departments and find the
+            right care for you.
         </p>
     </section>
 
     <section class="departments">
 
+        <!-- Cardiology -->
         <article class="department">
-            <h2>Cardiology</h2>
-            <p>
-                Dedicated to keeping your heart healthy. Our cardiology
-                specialists diagnose and treat heart-related conditions,
-                including hypertension, coronary artery disease and
-                other cardiovascular disorders.
-            </p>
-            <p><strong>Common tests:</strong> ECG, 2D Echo, Treadmill Test</p>
-            <p><strong>OPD timings:</strong> Mon – Sat, 9:00 AM – 4:00 PM</p>
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Cardiology</h2>
+                    <p class="description">Dedicated to keeping your heart healthy. Our cardiology specialists diagnose and treat heart-related conditions, including hypertension, coronary artery disease and cardiovascular disorders.</p>
+                    <p class="meta"><strong>Common tests:</strong> ECG, 2D Echo, Treadmill Test</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sat, 9:00 AM – 4:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/apoorva doc.png" alt="Dr. Apoorva Jain">
+                    <h2>Dr. Apoorva Jain</h2>
+                    <p class="speciality">Cardiology Specialist</p>
+                    <p class="avail-appoint">Available: 9:00 AM - 2:00 PM</p>
+                    <p class="days">Monday - Saturday</p>
+                </div>
+            </div>
         </article>
 
+        <!-- Dermatology -->
         <article class="department">
-            <h2>Dermatology</h2>
-            <p>
-                Expert care for your skin, hair and nails. We provide
-                diagnosis and treatment for acne, allergies, infections
-                and various other dermatological conditions.
-            </p>
-            <p><strong>Common concerns:</strong> Acne, skin rashes, hair fall, fungal infections</p>
-            <p><strong>OPD timings:</strong> Mon – Fri, 10:00 AM – 5:00 PM</p>
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Dermatology</h2>
+                    <p class="description">Expert care for your skin, hair and nails. We provide diagnosis and treatment for acne, allergies, infections and various other dermatological conditions.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Acne, skin rashes, hair fall, fungal infections</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Fri, 10:00 AM – 5:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/sneha doc.webp" alt="Dr. Riya Sharma">
+                    <h2>Dr. Riya Sharma</h2>
+                    <p class="speciality">Dermatologist</p>
+                    <p class="avail-appoint">Available: 10:00 AM - 3:00 PM</p>
+                    <p class="days">Monday - Friday</p>
+                </div>
+            </div>
         </article>
 
+        <!-- General Physician -->
         <article class="department">
-            <h2>General Physician</h2>
-            <p>
-                Your first step towards better health. Our physicians
-                provide routine health checkups, preventive care,
-                diagnosis and treatment for common illnesses.
-            </p>
-            <p><strong>Common concerns:</strong> Fever, cold and cough, diabetes, routine checkups</p>
-            <p><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>General Physician</h2>
+                    <p class="description">Your first step towards better health. Our physicians provide routine health checkups, preventive care, diagnosis and treatment for common illnesses.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Fever, cold and cough, diabetes, routine checkups</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/healthcare-stock.png" alt="Dr. Rahul Mehta">
+                    <h2>Dr. Rahul Mehta</h2>
+                    <p class="speciality">General Physician</p>
+                    <p class="avail-appoint">Available: 8:00 AM - 1:00 PM</p>
+                    <p class="days">Monday - Sunday</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Radiology -->
+        <article class="department">
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Radiology</h2>
+                    <p class="description">Advanced imaging services to help diagnose and monitor various medical conditions through X-rays, ultrasound, CT scans and other imaging techniques.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Internal injuries, bone fractures, abdominal pain, tumors and diagnostic imaging</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/whoever the last one was.avif" alt="Dr. Vikram Desai">
+                    <h2>Dr. Vikram Desai</h2>
+                    <p class="speciality">Radiologist</p>
+                    <p class="avail-appoint">Available: 9:00 AM - 5:00 PM</p>
+                    <p class="days">Monday - Saturday</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Neurology -->
+        <article class="department">
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Neurology</h2>
+                    <p class="description">Specialized care for disorders of the brain, spinal cord, nerves and nervous system, focusing on accurate diagnosis and effective treatment.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Headaches, migraines, seizures, stroke, epilepsy, dizziness and nerve disorders</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/apoorva doc.png" alt="Dr. Arjun Kapoor">
+                    <h2>Dr. Arjun Kapoor</h2>
+                    <p class="speciality">Neurologist</p>
+                    <p class="avail-appoint">Available: 11:00 AM - 5:00 PM</p>
+                    <p class="days">Monday - Friday</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Ophthalmology -->
+        <article class="department">
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Ophthalmology</h2>
+                    <p class="description">Comprehensive eye care services, including vision testing, diagnosis and treatment of various eye conditions to help maintain healthy eyesight.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Blurred vision, eye infections, cataracts, glaucoma, dry eyes and vision problems</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/sneha doc.webp" alt="Dr. Neha Verma">
+                    <h2>Dr. Neha Verma</h2>
+                    <p class="speciality">Ophthalmologist</p>
+                    <p class="avail-appoint">Available: 9:00 AM - 4:00 PM</p>
+                    <p class="days">Monday - Saturday</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- ENT -->
+        <article class="department">
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>ENT</h2>
+                    <p class="description">Specialized treatment for conditions affecting the ears, nose and throat, providing care for infections, hearing problems and related disorders.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Ear infections, hearing loss, sinusitis, sore throat, tonsillitis and nasal allergies</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/healthcare-stock.png" alt="Dr. Karan Malhotra">
+                    <h2>Dr. Karan Malhotra</h2>
+                    <p class="speciality">ENT Specialist</p>
+                    <p class="avail-appoint">Available: 10:00 AM - 4:00 PM</p>
+                    <p class="days">Monday - Saturday</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Orthopaedics (Bone Department) -->
+        <article class="department">
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Orthopaedics (Bone Department)</h2>
+                    <p class="description">Comprehensive care for bones, joints, muscles and the skeletal system, including treatment of injuries, fractures and musculoskeletal disorders.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Joint pain, back pain, fractures, arthritis, sports injuries and neck pain</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/whoever the last one was.avif" alt="Dr. Sandeep Rao">
+                    <h2>Dr. Sandeep Rao</h2>
+                    <p class="speciality">Orthopaedic Surgeon</p>
+                    <p class="avail-appoint">Available: 8:00 AM - 2:00 PM</p>
+                    <p class="days">Monday - Saturday</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Gynaecology -->
+        <article class="department">
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Gynaecology</h2>
+                    <p class="description">Dedicated healthcare for women's reproductive health, offering diagnosis, treatment and preventive care at every stage of life.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Menstrual disorders, PCOS, pregnancy-related concerns, hormonal imbalances and reproductive health issues</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/apoorva doc.png" alt="Dr. Priya Nair">
+                    <h2>Dr. Priya Nair</h2>
+                    <p class="speciality">Gynaecologist</p>
+                    <p class="avail-appoint">Available: 9:00 AM - 3:00 PM</p>
+                    <p class="days">Monday - Saturday</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Developmental Paediatrics -->
+        <article class="department">
+
+            <div class="department-info" style="display: flex; justify-content: center; align-items: center;">
+                <div style="display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                    <h2>Developmental Paediatrics</h2>
+                    <p class="description">Specialized care for children with developmental, intellectual, behavioural and learning difficulties, focusing on early diagnosis, intervention and improving quality of life.</p>
+                    <p class="meta"><strong>Common concerns:</strong> Autism spectrum disorder, intellectual disabilities, developmental delays, ADHD, speech and language difficulties and learning disabilities</p>
+                    <p class="meta"><strong>OPD timings:</strong> Mon – Sun, 8:00 AM – 8:00 PM</p>
+                    <a href="booking.html" style="margin-left: 35px;">Book appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <img src="pictures/sneha doc.webp" alt="Dr. Ananya Gupta">
+                    <h2>Dr. Ananya Gupta</h2>
+                    <p class="speciality">Developmental Paediatrician</p>
+                    <p class="avail-appoint">Available: 10:00 AM - 5:00 PM</p>
+                    <p class="days">Monday - Friday</p>
+                </div>
+            </div>
         </article>
 
     </section>
 
 </main>
 
-<footer>
-    <p>Contact: +91 987654321</p>
-</footer>
+    <footer>
+      <p>Contact: +91 987654321</p>
+      <p>Email: medicare@outlook.com</p>
+      <p>Address: Bareilly, Uttar Pradesh</p>
+    </footer>
 
 </body>
 </html>
